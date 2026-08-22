@@ -1,0 +1,44 @@
+{
+  "name": "alexandria",
+  "owner": {
+    "name": "Alexandria",
+    "url": "https://github.com/alexandriahq"
+  },
+  "metadata": {
+    "description": "Alexandria public Agent Plugins."
+  },
+  "plugins": [
+    {
+      "name": "ambient-context",
+      "description": "Read-only Ambient public context vault for coding agents: current intents, redacted evidence, and markdown memory.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Alexandria",
+        "url": "https://github.com/alexandriahq/ambient"
+      },
+      "keywords": [
+        "ambient",
+        "context",
+        "vault",
+        "mcp"
+      ],
+      "source": "./plugins/ambient-context"
+    },
+    {
+      "name": "ambient-multiplayer",
+      "description": "Org-side Ambient Multiplayer MCP: search shared memories and trajectories, list groups and connectors, and publish a Prepare batch.",
+      "version": "0.2.0",
+      "author": {
+        "name": "Alexandria",
+        "url": "https://github.com/alexandriahq/ambient"
+      },
+      "keywords": [
+        "ambient",
+        "multiplayer",
+        "mcp",
+        "org-context"
+      ],
+      "source": "./plugins/ambient-multiplayer"
+    }
+  ]
+}

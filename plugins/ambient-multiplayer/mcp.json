@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "multiplayer": {
+      "type": "streamable-http",
+      "url": "https://lighthouse-server-production-de2c.up.railway.app/v1/me/mcp"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ambient-multiplayer",
+  "description": "Org-side Ambient Multiplayer MCP: search shared memories and trajectories, list groups and connectors, and publish a Prepare batch.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Alexandria",
+    "url": "https://github.com/alexandriahq/ambient"
+  },
+  "homepage": "https://github.com/alexandriahq/public-plugins",
+  "repository": "https://github.com/alexandriahq/public-plugins",
+  "keywords": [
+    "ambient",
+    "multiplayer",
+    "mcp",
+    "org-context"
+  ]
+}
