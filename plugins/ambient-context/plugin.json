@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ambient-context",
+  "version": "1.0.0",
+  "description": "Read-only Ambient public context vault for coding agents: current intents, redacted evidence, and markdown memory.",
+  "author": {
+    "name": "Alexandria",
+    "url": "https://github.com/alexandriahq/ambient"
+  },
+  "homepage": "https://github.com/alexandriahq/public-plugins",
+  "repository": "https://github.com/alexandriahq/public-plugins",
+  "keywords": ["ambient", "context", "vault", "mcp"]
+}

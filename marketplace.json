@@ -1,0 +1,9 @@
+{
+  "name": "alexandria",
+  "description": "Alexandria public Agent Plugins: Ambient Context and Multiplayer.",
+  "owner": {
+    "name": "Alexandria",
+    "url": "https://github.com/alexandriahq"
+  },
+  "repository": "https://github.com/alexandriahq/public-plugins"
+}
