@@ -5,7 +5,7 @@
     "url": "https://github.com/alexandriahq"
   },
   "metadata": {
-    "description": "Alexandria public Agent Plugins: Ambient Context and Multiplayer."
+    "description": "Alexandria public Agent Plugins."
   },
   "plugins": [
     {
