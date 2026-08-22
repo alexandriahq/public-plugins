@@ -10,16 +10,16 @@ Multiplayer is the org-side store for published Ambient context. HTTP JSON is th
 Connects to the hosted Streamable HTTP server:
 
 ```text
-https://lighthouse-server-production-de2c.up.railway.app/v1/me/mcp
+https://lighthouse-server-production-de2c.up.railway.app/v1/mcp
 ```
 
-The client authenticates after install (user PAT `mp_…` from Settings → Access, or a WorkOS session). Never put a bearer token, WorkOS session, or user PAT in plugin files or MCP `headers`.
+The client authenticates after install with a user PAT (`mp_…` from Settings → Access). Never put a bearer token, WorkOS session, or user PAT in plugin files or MCP `headers`. `/v1/me/mcp` is the desktop WorkOS path, not this plugin.
 
 ## Privacy Boundary
 
 - Sealed fields stay ciphertext on the wire. Decrypt locally when the org uses customer KMS or sealed envelopes.
 - Do not invent an `orgId` for WorkOS or user-PAT callers. The server stamps identity from the credential.
-- Root (service token without a user header) is the admin class and uses `POST /v1/mcp`, not this plugin URL. Prefer a user PAT (`mp_…`) for Codex / Claude Code.
+- Root (service token without a user header) is the admin class on this same URL and must pass `orgId`. Prefer a user PAT (`mp_…`) for Codex / Claude Code.
 
 ## Discovery Workflow
 

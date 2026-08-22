@@ -3,7 +3,7 @@
   "mcpServers": {
     "multiplayer": {
       "type": "streamable-http",
-      "url": "https://lighthouse-server-production-de2c.up.railway.app/v1/me/mcp"
+      "url": "https://lighthouse-server-production-de2c.up.railway.app/v1/mcp"
     }
   }
 }
