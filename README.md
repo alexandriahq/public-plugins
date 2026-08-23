@@ -49,7 +49,7 @@ Manual setup in any Streamable HTTP client:
 
 ## Confidential Nodes
 
-Search public confidential-compute GPU listings without signing in. Submitting a buyer requirement or seller quote uses the MCP client's OAuth flow and requires a verified Confidential Nodes account.
+Search public confidential-compute GPU listings and submit a buyer requirement or seller quote without signing in. Submissions require a contact email for marketplace follow-up.
 
 Hosted Streamable HTTP:
 
