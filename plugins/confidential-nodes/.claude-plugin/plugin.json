@@ -1,0 +1,23 @@
+{
+  "name": "confidential-nodes",
+  "description": "Search public confidential-compute GPU listings and submit authenticated buyer requests or seller quotes.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Alexandria",
+    "url": "https://github.com/alexandriahq"
+  },
+  "homepage": "https://confidentialnodes.com",
+  "repository": "https://github.com/alexandriahq/public-plugins",
+  "keywords": [
+    "confidential-compute",
+    "gpu",
+    "marketplace",
+    "mcp"
+  ],
+  "mcpServers": {
+    "confidential-nodes": {
+      "type": "http",
+      "url": "https://confidentialnodes.com/public-mcp"
+    }
+  }
+}

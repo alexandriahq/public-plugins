@@ -10,6 +10,7 @@ Connect [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Cursor](
 /plugin marketplace add alexandriahq/public-plugins
 /plugin install ambient-context@alexandria
 /plugin install ambient-multiplayer@alexandria
+/plugin install confidential-nodes@alexandria
 ```
 
 **Cursor**
@@ -46,11 +47,22 @@ Manual setup in any Streamable HTTP client:
 }
 ```
 
+## Confidential Nodes
+
+Search public confidential-compute GPU listings without signing in. Submitting a buyer requirement or seller quote uses the MCP client's OAuth flow and requires a verified Confidential Nodes account.
+
+Hosted Streamable HTTP:
+
+```text
+https://confidentialnodes.com/public-mcp
+```
+
 ## Plugins in this marketplace
 
 | Plugin | MCP |
 | --- | --- |
 | `ambient-context` | `http://127.0.0.1:8765/mcp` |
 | `ambient-multiplayer` | `https://lighthouse-server-production-de2c.up.railway.app/v1/mcp` |
+| `confidential-nodes` | `https://confidentialnodes.com/public-mcp` |
 
-Any Agent Plugins client can also load `plugins/ambient-context/` or `plugins/ambient-multiplayer/` as a plugin root.
+Any Agent Plugins client can also load a directory under `plugins/` as a plugin root.
