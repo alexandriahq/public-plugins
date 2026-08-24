@@ -1,7 +1,7 @@
 {
   "name": "confidential-nodes",
-  "description": "Search public confidential-compute GPU listings and submit authenticated buyer requests or seller quotes.",
-  "version": "0.1.0",
+  "description": "Search confidential-compute GPU listings and submit buyer requests or seller quotes without an account.",
+  "version": "0.1.1",
   "author": {
     "name": "Alexandria",
     "url": "https://github.com/alexandriahq"

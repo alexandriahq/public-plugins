@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "confidential-nodes",
-  "version": "0.1.0",
-  "description": "Search public confidential-compute GPU listings and submit authenticated buyer requests or seller quotes.",
+  "version": "0.1.1",
+  "description": "Search confidential-compute GPU listings and submit buyer requests or seller quotes without an account.",
   "author": {
     "name": "Alexandria",
     "url": "https://github.com/alexandriahq"
