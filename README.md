@@ -30,7 +30,7 @@ Organization memories, trajectories, connectors, and publish.
 Hosted Streamable HTTP:
 
 ```text
-https://lighthouse-server-production-de2c.up.railway.app/v1/mcp
+https://multiplayer-server-production-de2c.up.railway.app/v1/mcp
 ```
 
 After install, authenticate in the client with a Multiplayer user access token (`mp_…` from Settings → Access). Do not put tokens in this repository.
@@ -41,7 +41,7 @@ Manual setup in any Streamable HTTP client:
 {
   "mcpServers": {
     "multiplayer": {
-      "url": "https://lighthouse-server-production-de2c.up.railway.app/v1/mcp"
+      "url": "https://multiplayer-server-production-de2c.up.railway.app/v1/mcp"
     }
   }
 }
@@ -62,7 +62,7 @@ https://confidentialnodes.com/public-mcp
 | Plugin | MCP |
 | --- | --- |
 | `ambient-context` | `http://127.0.0.1:8765/mcp` |
-| `ambient-multiplayer` | `https://lighthouse-server-production-de2c.up.railway.app/v1/mcp` |
+| `ambient-multiplayer` | `https://multiplayer-server-production-de2c.up.railway.app/v1/mcp` |
 | `confidential-nodes` | `https://confidentialnodes.com/public-mcp` |
 
 Any Agent Plugins client can also load a directory under `plugins/` as a plugin root.
