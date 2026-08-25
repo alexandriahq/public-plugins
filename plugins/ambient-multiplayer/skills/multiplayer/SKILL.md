@@ -10,7 +10,7 @@ Multiplayer is the org-side store for published Ambient context. HTTP JSON is th
 Connects to the hosted Streamable HTTP server:
 
 ```text
-https://lighthouse-server-production-de2c.up.railway.app/v1/mcp
+https://multiplayer-server-production-de2c.up.railway.app/v1/mcp
 ```
 
 The client authenticates after install with a user PAT (`mp_…` from Settings → Access). Never put a bearer token, WorkOS session, or user PAT in plugin files or MCP `headers`. `/v1/me/mcp` is the desktop WorkOS path, not this plugin.
