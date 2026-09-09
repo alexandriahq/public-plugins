@@ -5,6 +5,8 @@ description: Collect bounded local diagnostics and prepare or file an Ambient bu
 
 # Ambient reporting
 
+For this Alexandria polish workflow, file customer/product reports in **Product Feedback**, not engineering Issues; use the destination and exact property names in the field contract.
+
 Read [the intake workflow and field contract](references/report-fields.md) before filing. The mandatory order is **save to Notion → ask in chat → update the same record**. Save every known fact immediately, with dates and explicit pending fields. Do not wait for diagnostics or follow-up answers. Show the saved link before asking; an unanswered question must never discard or cancel the report.
 
 After the first save, and before restarting, updating or resetting anything, run the installed ambient-diagnostics capabilities command. Local and Dev installations use ambient-diagnostics-local and ambient-diagnostics-dev respectively. Do not substitute another profile if its command is unavailable.
