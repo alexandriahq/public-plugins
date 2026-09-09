@@ -12,6 +12,12 @@ A request to file/report a problem authorizes saving it to the configured tracke
 2. Collect bounded diagnostics and create/link the GitHub detail issue when available. Persist additional facts immediately. Put the outstanding questions in Follow-up Questions and set Completeness=Needs information before asking those questions in chat. Ask only for facts that cannot be inferred reliably, using the actual field names; group related questions into one concise message. The saved record must already contain the user's report if they leave or cancel the conversation.
 3. On each answer, update the same Notion row and linked GitHub issue; preserve Report ID and Created, refresh Updated, remove only answered questions, and read back the changes. Do not require all answers before saving a partial reply. No reply leaves the row Open / Needs information. Never delete, archive, close, or cancel a report merely because the user stopped replying. Explicit user cancellation/deletion instructions still apply.
 
+## One reporting flow for users and testers
+
+An informal or dictated “I had an Ambient bug; add it to our database” is enough. Save it first. Preserve the person's task, symptom, reinstall history, side-by-side versions and clues; do not require a form or make them repeat known facts.
+
+After saving, inspect bounded diagnostic logs, Ambient/Bridge installation and profile identity, relevant running processes and open Ambient/Bridge windows using available read-only harness tools. Distinguish incident-time evidence from current state. Look for multiple installs/instances, mismatched versions and windows closed while processes remain alive. Record unavailable access explicitly. Do not restart or reset anything during collection, inspect unrelated private content, or upload full process arguments, environments or a system inventory. Ask only for facts that remain unknown, then update the same saved report. The public ambient-report skill carries the detailed inspection checklist.
+
 ## Field-by-field contract
 
 Read this table before every intake. Enumerate the live schema so newly added properties are also accounted for. Notion formula, rollup, created-time, last-edited-time and other computed properties are read-only: verify them, do not write them.
