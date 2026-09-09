@@ -19,7 +19,7 @@ Settings → Plugins → Import Marketplace, then paste `https://github.com/alex
 
 ## Ambient Context
 
-Read-only local vault: current intents, redacted evidence, and markdown memory.
+Read-only local vault: current intents, redacted evidence, and markdown memory. The ambient-report skill uses the separately installed ambient-diagnostics command for bounded support reports. It checks the installed schema and loads the matching offline playbook; older apps without that command retain the public-vault workflow.
 
 The Ambient desktop app serves MCP at `http://127.0.0.1:8765/mcp`. Open Ambient, then use the plugin.
 
