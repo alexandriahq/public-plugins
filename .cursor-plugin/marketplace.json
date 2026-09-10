@@ -10,8 +10,8 @@
   "plugins": [
     {
       "name": "ambient-context",
-      "description": "Read-only Ambient public context vault for coding agents: current intents, redacted evidence, and markdown memory.",
-      "version": "1.0.0",
+      "description": "Read-only Ambient public context vault and bounded local support reporting for coding agents.",
+      "version": "1.0.1",
       "author": {
         "name": "Alexandria",
         "url": "https://github.com/alexandriahq/ambient"
