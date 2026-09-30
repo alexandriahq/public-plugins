@@ -4,7 +4,7 @@
 
 Product/customer feedback in this workflow goes to **Product Feedback**, data source `3d4c87e6-4427-8028-a439-000b23f9417f`, database `3d4c87e6-4427-80bf-b230-c8101df648b6`. Its title is **Feedback**. It is the only Alexandria Notion tracker. The old engineering Issues database (`9a2fbcbd-f0af-4b86-a53e-ed166146fa32`) is retired and its records are moving into Product Feedback (moved rows keep their old identity in Legacy ID). Never create or update a report there. Search Product Feedback, including Legacy ID, for a matching row before creating one. Outside this enrolled Alexandria workflow, use the explicitly configured destination.
 
-Fill every field present in the actual live schema, and do not create properties to satisfy this table. Product Feedback has Classification, Customer type and OS, plus the ownership, labeling and hierarchy fields carried over from Issues. It has two people columns: `Assignee (Engineering` is the owner; the plain `Assignee` holds imported values, so preserve them and do not use it for new reports.
+Fill every field present in the actual live schema, and do not create properties to satisfy this table. Product Feedback has Classification, Customer type and OS, plus the ownership, labeling and hierarchy fields carried over from Issues. The owner column is `Assignee (Engineering)`; the plain `Assignee` column is a legacy import leftover, so leave it empty.
 
 A request to file/report a problem authorizes saving it to the configured tracker. Do not wait for follow-up answers, complete diagnostics, GitHub availability, or a final confirmation before the first Notion write. This contract overrides GitHub-first filing and summary-only Notion intake for polish reports.
 
@@ -51,7 +51,7 @@ Read this table before every intake. Enumerate the live schema so newly added pr
 | Verified At | Date/time the original scenario passed on the running released version. While Open: typed null and `Verified At: N/A — not verified on a release`. Source tests are not a verification date. |
 | Closed At | Actual closure timestamp plus disposition in Field Notes. While open: typed null and `Closed At: N/A — issue remains open`. |
 | Creator | Human reporter's known name; distinguish reporting agent if useful. Unknown reporter: pending and ask. |
-| Assignee (Engineering / Assignee | Set `Assignee (Engineering` to the configured owner, defaulting in Alexandria to bot.owner.user from ntn whoami, never the integration bot. Record default in Field Notes. Unknown/unresolvable owner: empty people list plus pending explanation and ask. Preserve existing plain `Assignee` values. |
+| Assignee (Engineering) | Configured owner, defaulting in Alexandria to bot.owner.user from ntn whoami, never the integration bot. Record default in Field Notes. Unknown/unresolvable owner: empty people list plus pending explanation and ask. Do not use the legacy plain `Assignee` column. |
 | Priority | Derive from stated impact using existing options; record rationale. If impact unknown use No priority only if that option exists; otherwise leave select null. Record pending rationale and ask about impact. |
 | Labels | Existing supported category, e.g. Bug for a defect; preserve existing labels. Unclear category: pending explanation and ask. |
 | Project / Team | Configured destination (Alexandria: Product Development / Alexandria), recording defaults. If destination unknown, ask; do not infer a destination from diagnostics. |
