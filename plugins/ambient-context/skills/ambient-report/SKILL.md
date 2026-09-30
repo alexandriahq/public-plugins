@@ -5,7 +5,7 @@ description: Save and investigate Ambient or Bridge bug reports, including infor
 
 # Ambient reporting
 
-For this Alexandria polish workflow, file customer/product reports in **Product Feedback**, not engineering Issues; use the destination and exact property names in the field contract.
+For this Alexandria workflow, file every report in **Product Feedback**, the only Notion tracker; the old engineering Issues database is retired. Use the destination and exact property names in the field contract.
 
 Read [the intake workflow and field contract](references/report-fields.md) before filing. The mandatory order is **save to Notion → ask in chat → update the same record**. Save every known fact immediately, with dates and explicit pending fields. Do not wait for diagnostics or follow-up answers. Show the saved link before asking; an unanswered question must never discard or cancel the report.
 

@@ -2,9 +2,9 @@
 
 ## Destination
 
-Product/customer feedback in this workflow goes to **Product Feedback**, data source `3d4c87e6-4427-8028-a439-000b23f9417f`, database `3d4c87e6-4427-80bf-b230-c8101df648b6`. Its title is **Feedback**. Do not substitute engineering Issues (`9a2fbcbd-f0af-4b86-a53e-ed166146fa32`). Existing engineering issue records remain there; do not duplicate or migrate them automatically. Outside this enrolled Alexandria workflow, use the explicitly configured destination.
+Product/customer feedback in this workflow goes to **Product Feedback**, data source `3d4c87e6-4427-8028-a439-000b23f9417f`, database `3d4c87e6-4427-80bf-b230-c8101df648b6`. Its title is **Feedback**. It is the only Alexandria Notion tracker. The old engineering Issues database (`9a2fbcbd-f0af-4b86-a53e-ed166146fa32`) is retired and its records are moving into Product Feedback (moved rows keep their old identity in Legacy ID). Never create or update a report there. Search Product Feedback, including Legacy ID, for a matching row before creating one. Outside this enrolled Alexandria workflow, use the explicitly configured destination.
 
-The table covers both schemas: fill every field present in the actual live schema, not properties that exist only in another database. Product Feedback uses Classification, Customer type and OS; do not create Issues-only hierarchy or ownership fields to satisfy this table.
+Fill every field present in the actual live schema, and do not create properties to satisfy this table. Product Feedback has Classification, Customer type and OS, plus the ownership, labeling and hierarchy fields carried over from Issues. It has two people columns: `Assignee (Engineering` is the owner; the plain `Assignee` holds imported values, so preserve them and do not use it for new reports.
 
 A request to file/report a problem authorizes saving it to the configured tracker. Do not wait for follow-up answers, complete diagnostics, GitHub availability, or a final confirmation before the first Notion write. This contract overrides GitHub-first filing and summary-only Notion intake for polish reports.
 
@@ -27,6 +27,7 @@ Read this table before every intake. Enumerate the live schema so newly added pr
 | Feedback / Name | Concise symptom and affected surface; derive from the user's report. |
 | Classification | Bug or Improvement according to the reported behavior; if unclear leave select null, record pending and ask. |
 | Company | Reporter’s stated company; unknown is pending and ask. Internal Alexandria reports may use Alexandria when established. |
+| Customer name | Reporter's known name or handle; unknown is pending and ask. |
 | Customer contact | Known reporter email only. Missing: typed null, pending explanation and ask for a follow-up contact; do not fabricate an email. |
 | Customer type | Internal or External from known relationship; unknown is pending and ask. |
 | OS | macOS, Windows or Linux from evidence; unknown is pending and ask. Put version/architecture in Environment. |
@@ -39,7 +40,7 @@ Read this table before every intake. Enumerate the live schema so newly added pr
 | Impact | Affected task/users, frequency and workaround. Unknown details are pending; ask. |
 | Evidence | Links or concise facts already provided; label source/mock/native evidence. `Pending — not yet collected` if absent. Keep raw diagnostics/screenshots on GitHub; never upload private capture or secrets. |
 | GitHub Issue | Exact existing/created issue URL. Until available, typed null plus `GitHub Issue: Pending — creation/link unavailable` in Field Notes. First Notion save must not depend on GitHub. |
-| Status | Open on intake; Fixed only after released-version verification; Closed only with a recorded disposition. Missing answers never change this lifecycle. |
+| Status | Open on intake; Fixed only after released-version verification; Closed only with a recorded disposition. A duplicate or cancelled report is Closed with the disposition (and, for a duplicate, the kept row's link) in Field Notes. Leave `on hold` to maintainers. Missing answers never change this lifecycle. |
 | Completeness | Needs information while any relevant fact/question or required linking operation is pending. Complete only when every property is known or legitimately not applicable and there are no unresolved questions. This is independent of issue Status. |
 | Follow-up Questions | Exact unanswered questions keyed to fields. `None — intake complete` when none. Persist before asking in chat. |
 | Field Notes | Every pending or not-applicable property with its reason, including typed-null dates/links/relations. `None — all fields have known values` only if true. Also record declared defaults and any extra schema properties. |
@@ -50,7 +51,7 @@ Read this table before every intake. Enumerate the live schema so newly added pr
 | Verified At | Date/time the original scenario passed on the running released version. While Open: typed null and `Verified At: N/A — not verified on a release`. Source tests are not a verification date. |
 | Closed At | Actual closure timestamp plus disposition in Field Notes. While open: typed null and `Closed At: N/A — issue remains open`. |
 | Creator | Human reporter's known name; distinguish reporting agent if useful. Unknown reporter: pending and ask. |
-| Assignee | Configured owner, defaulting in Alexandria to bot.owner.user from ntn whoami, never the integration bot. Record default in Field Notes. Unknown/unresolvable owner: empty people list plus pending explanation and ask. |
+| Assignee (Engineering / Assignee | Set `Assignee (Engineering` to the configured owner, defaulting in Alexandria to bot.owner.user from ntn whoami, never the integration bot. Record default in Field Notes. Unknown/unresolvable owner: empty people list plus pending explanation and ask. Preserve existing plain `Assignee` values. |
 | Priority | Derive from stated impact using existing options; record rationale. If impact unknown use No priority only if that option exists; otherwise leave select null. Record pending rationale and ask about impact. |
 | Labels | Existing supported category, e.g. Bug for a defect; preserve existing labels. Unclear category: pending explanation and ask. |
 | Project / Team | Configured destination (Alexandria: Product Development / Alexandria), recording defaults. If destination unknown, ask; do not infer a destination from diagnostics. |
