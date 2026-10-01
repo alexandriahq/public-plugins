@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ambient-context",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Read-only Ambient public context vault and bounded local support reporting for coding agents.",
   "author": {
     "name": "Alexandria",
