@@ -25,22 +25,6 @@
       "source": "./plugins/ambient-context"
     },
     {
-      "name": "ambient-multiplayer",
-      "description": "Org-side Ambient Multiplayer MCP: search shared memories and trajectories, list groups and connectors, and publish a Prepare batch.",
-      "version": "0.2.0",
-      "author": {
-        "name": "Alexandria",
-        "url": "https://github.com/alexandriahq/ambient"
-      },
-      "keywords": [
-        "ambient",
-        "multiplayer",
-        "mcp",
-        "org-context"
-      ],
-      "source": "./plugins/ambient-multiplayer"
-    },
-    {
       "name": "confidential-nodes",
       "description": "Search public confidential-compute GPU listings and submit authenticated buyer requests or seller quotes.",
       "version": "0.1.0",

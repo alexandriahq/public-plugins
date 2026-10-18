@@ -9,7 +9,6 @@ Connect [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Cursor](
 ```text
 /plugin marketplace add alexandriahq/public-plugins
 /plugin install ambient-context@alexandria
-/plugin install ambient-multiplayer@alexandria
 /plugin install confidential-nodes@alexandria
 ```
 
@@ -22,30 +21,6 @@ Settings → Plugins → Import Marketplace, then paste `https://github.com/alex
 Read-only local vault: current intents, redacted evidence, and markdown memory. The ambient-report skill uses the separately installed ambient-diagnostics command for bounded support reports. It checks the installed schema and loads the matching offline playbook; older apps without that command retain the public-vault workflow.
 
 The Ambient desktop app serves MCP at `http://127.0.0.1:8765/mcp`. Open Ambient, then use the plugin.
-
-## Ambient Multiplayer
-
-Organization memories, trajectories, connectors, and publish.
-
-Hosted Streamable HTTP:
-
-```text
-https://multiplayer-server-production-de2c.up.railway.app/v1/mcp
-```
-
-After install, authenticate in the client with a Multiplayer user access token (`mp_…` from Settings → Access). Do not put tokens in this repository.
-
-Manual setup in any Streamable HTTP client:
-
-```json
-{
-  "mcpServers": {
-    "multiplayer": {
-      "url": "https://multiplayer-server-production-de2c.up.railway.app/v1/mcp"
-    }
-  }
-}
-```
 
 ## Confidential Nodes
 
@@ -62,7 +37,6 @@ https://confidentialnodes.com/public-mcp
 | Plugin | MCP |
 | --- | --- |
 | `ambient-context` | `http://127.0.0.1:8765/mcp` |
-| `ambient-multiplayer` | `https://multiplayer-server-production-de2c.up.railway.app/v1/mcp` |
 | `confidential-nodes` | `https://confidentialnodes.com/public-mcp` |
 
 Any Agent Plugins client can also load a directory under `plugins/` as a plugin root.
